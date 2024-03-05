@@ -40,11 +40,10 @@ public class RecursionLab {
     
             // Check if the first and last characters are the same
             if (str.charAt(0) == str.charAt(str.length() - 1)) {
-                // If the first and last characters match, check the rest of the string
-                // excluding the first and last characters
+               
                 return isPalindrome(str.substring(1, str.length() - 1));
             } else {
-                // If the first and last characters do not match, it's not a palindrome
+                
                 return false;
             }
         }
