@@ -10,11 +10,6 @@ public class SLLNode {
         this.info = value;
         this.next = next;
     }
-
-    public void addToTail(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addToTail'");
-    }
 }
 
 class InnerSLLNode {
@@ -119,7 +114,33 @@ class InnerSLLNode {
        
     }
 
+    public int count(int key){
+        int count=0;
+        if(head==null){
+            return 0;
+
+        }
+        else if(head==tail){
+            if(head.info==key){
+                return 1;
+            }else{
+                return 0;
+            }
+        }
+        else{
+            SLLNode temp;
+            for(temp=head;temp!=null;temp= temp.next){
+                if(temp.info==key){
+                    count++;
+                }
+            }
+            return count;
+        }
+    }
+
     
 
 }
+
+
 
